@@ -1,3 +1,4 @@
 /go-kv/go.sum
 .idea
 /rust-kv/target/
+/rust-kv/Cargo.lock
