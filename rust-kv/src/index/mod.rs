@@ -3,7 +3,7 @@ pub mod btree;
 use crate::data::log_record::LogRecordPos;
 
 /// Indexer 抽象索引接口
-pub trait Indexer {
+pub trait Indexer: Sync + Send {
     /// 向索引中存储 key 对应的数据位置信息
     fn put(&self, key: Vec<u8>, pos: LogRecordPos) -> bool;
     /// 根据 key 去除对应的索引位置信息
